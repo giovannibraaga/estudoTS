@@ -1,14 +1,14 @@
+import { Account } from "./Account";
+
 class AccountPJ extends Account {
   cnpj: number;
 
-  constructor(cnpj: number, owner: string, balance: number) {
-    super(owner, balance);
+  constructor(cnpj: number, owner: string, _balance: number) {
+    super(owner, _balance);
     this.cnpj = cnpj;
   }
 
-  pessoaJuridica = new AccountPJ(11111111111111, "Carlos Bernardo", 1000);
-
-  accountBalancePJ(): string {
+  accountBalancePJ(): any {
     return `Hey ${this.owner}! Your balance is: $ ${this.accountBalance()}`;
   }
 
@@ -22,3 +22,5 @@ class AccountPJ extends Account {
     }
   }
 }
+const pj = new AccountPJ(11111111111111, "Carlos Bernardo", 1000);
+console.log(pj.accountNumber);

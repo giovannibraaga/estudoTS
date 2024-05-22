@@ -1,7 +1,4 @@
-// public | private | protected
-/* There was a security error in the last example, because it was declared as public, so anyone can change the balance amount just calling the "balance" directly */
-
-export abstract class Account {
+abstract class Accounts {
   // variables
   private readonly _accountNumber: number;
   owner: string;

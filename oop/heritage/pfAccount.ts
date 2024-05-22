@@ -1,12 +1,12 @@
+import { Account } from "./Account";
+
 class AccountPF extends Account {
   cpf: number;
 
-  constructor(cpf: number, owner: string, balance: number) {
-    super(owner, balance);
+  constructor(cpf: number, owner: string, _balance: number) {
+    super(owner, _balance);
     this.cpf = cpf;
   }
-
-  pessoaFisica = new AccountPF(11111111111, "Lara Mendes", 10000);
 
   accountBalancePF(): string {
     return `Hey ${this.owner}! Your balance is: $ ${this.accountBalance()}`;
@@ -22,3 +22,6 @@ class AccountPF extends Account {
     }
   }
 }
+
+const pf = new AccountPF(11111111111, "Lara Mendes", 10000);
+console.log(pf.accountNumber);

@@ -1,8 +1,9 @@
 "use strict";
-class AccountPJ extends Account {
-    constructor(cnpj, owner, balance) {
-        super(owner, balance);
-        this.pessoaJuridica = new AccountPJ(11111111111111, "Carlos Bernardo", 1000);
+Object.defineProperty(exports, "__esModule", { value: true });
+const Account_1 = require("./Account");
+class AccountPJ extends Account_1.Account {
+    constructor(cnpj, owner, _balance) {
+        super(owner, _balance);
         this.cnpj = cnpj;
     }
     accountBalancePJ() {
@@ -17,3 +18,5 @@ class AccountPJ extends Account {
         }
     }
 }
+const pj = new AccountPJ(11111111111111, "Carlos Bernardo", 1000);
+console.log(pj.accountNumber);

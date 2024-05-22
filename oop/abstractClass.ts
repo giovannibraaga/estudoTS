@@ -1,9 +1,6 @@
-// public | private | protected
-/* There was a security error in the last example, because it was declared as public, so anyone can change the balance amount just calling the "balance" directly */
-
-export abstract class Account {
+abstract class Account {
   // variables
-  private readonly _accountNumber: number;
+  private _accountNumber: number;
   owner: string;
   private _balance: number;
 
@@ -33,3 +30,6 @@ export abstract class Account {
     this._balance -= withdrawAmount;
   }
 }
+
+// const firstAccount = new Account('Giovanni', 200)
+// will be just a model class. You can't instance a new account from this one, you'll get an error if you try

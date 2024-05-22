@@ -1,8 +1,9 @@
 "use strict";
-class AccountPF extends Account {
-    constructor(cpf, owner, balance) {
-        super(owner, balance);
-        this.pessoaFisica = new AccountPF(11111111111, "Lara Mendes", 10000);
+Object.defineProperty(exports, "__esModule", { value: true });
+const Account_1 = require("./Account");
+class AccountPF extends Account_1.Account {
+    constructor(cpf, owner, _balance) {
+        super(owner, _balance);
         this.cpf = cpf;
     }
     accountBalancePF() {
@@ -17,3 +18,5 @@ class AccountPF extends Account {
         }
     }
 }
+const pf = new AccountPF(11111111111, "Lara Mendes", 10000);
+console.log(pf.accountNumber);

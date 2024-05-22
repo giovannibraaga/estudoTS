@@ -1,8 +1,4 @@
 "use strict";
-// public | private | protected
-/* There was a security error in the last example, because it was declared as public, so anyone can change the balance amount just calling the "balance" directly */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Account = void 0;
 class Account {
     // constructor
     constructor(owner, balance) {
@@ -26,4 +22,5 @@ class Account {
         this._balance -= withdrawAmount;
     }
 }
-exports.Account = Account;
+// const firstAccount = new Account('Giovanni', 200)
+// will be just a model class. You can't instance a new account from this one, you'll get an error if you try
