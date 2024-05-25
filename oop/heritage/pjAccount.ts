@@ -1,11 +1,14 @@
+import { taxes } from "../../interfaces/interfaceImplementation";
 import { Account } from "./Account";
 
-class AccountPJ extends Account {
+class AccountPJ extends Account /*implements taxes*/{
   cnpj: number;
+  private _taxes?: number;
 
   constructor(cnpj: number, owner: string, _balance: number) {
     super(owner, _balance);
     this.cnpj = cnpj;
+    this._taxes = 0;
   }
 
   accountBalancePJ(): any {
@@ -21,6 +24,26 @@ class AccountPJ extends Account {
       );
     }
   }
+
+  // TaxesCalc(taxesCalc: number) {
+  //   if (taxesCalc > 0 && taxesCalc < 2259.21) {
+  //     console.log("You don't have to pay taxes.");
+  //   } else if (taxesCalc >= 2259.21 && taxesCalc <= 2826.65) {
+  //     this._taxes = taxesCalc * 0.075;
+  //     console.log(`Your tax amount is: ${this._taxes}`);
+  //   } else if (taxesCalc > 2826.65 && taxesCalc <= 3751.05) {
+  //     this._taxes = taxesCalc * 0.15;
+  //     console.log(`Your tax amount is: ${this._taxes}`);
+  //   } else if (taxesCalc > 3751.05 && taxesCalc <= 4664.68) {
+  //     this._taxes = taxesCalc * 0.225;
+  //     console.log(`Your tax amount is: ${this._taxes}`);
+  //   } else if (taxesCalc > 4664.68) {
+  //     this._taxes = taxesCalc * 0.275;
+  //     console.log(`Your tax amount is: ${this._taxes}`);
+  //   } else {
+  //     console.log("Invalid input.");
+  //   }
+  // }
 }
 const pj = new AccountPJ(11111111111111, "Carlos Bernardo", 1000);
 console.log(pj.accountNumber);

@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Account_1 = require("./Account");
-class AccountPJ extends Account_1.Account {
+class AccountPJ extends Account_1.Account /*implements taxes*/ {
     constructor(cnpj, owner, _balance) {
         super(owner, _balance);
         this.cnpj = cnpj;
+        this._taxes = 0;
     }
     accountBalancePJ() {
         return `Hey ${this.owner}! Your balance is: $ ${this.accountBalance()}`;
