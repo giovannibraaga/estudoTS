@@ -1,4 +1,7 @@
-function validateOwner(target: any, propertyKey: any) {}
+function validateOwner(target: any, propertyKey: any) {
+  console.log("target", target);
+  console.log("property key", propertyKey);
+}
 
 class AccountB {
   accountNumber: number;

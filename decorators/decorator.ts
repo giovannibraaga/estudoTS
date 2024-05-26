@@ -1,4 +1,8 @@
-function balanceAnalysis(target: any, propertyKey: any, descriptor: any) {}
+function balanceAnalysis(target: any, propertyKey: any, descriptor: any) {
+  console.log("target", target);
+  console.log("property key", propertyKey);
+  console.log("descriptor", descriptor);
+}
 
 class AccountA {
   accountNumber: number;
